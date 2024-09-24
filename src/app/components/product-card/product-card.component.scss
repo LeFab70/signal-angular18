@@ -1,0 +1,34 @@
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid;
+  thead {
+    tr {
+      th {
+        border: 0.15rem solid red;
+        font-weight: bolder;
+        color: green;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .in-stock {
+    background-color: rgba(0, 128, 0, 0.493);
+  }
+  .rupture {
+    background-color: rgba(255, 0, 0, 0.425);
+  }
+  th,
+  td {
+    padding: 0.5rem;
+  }
+  tbody td {
+    text-align: center;
+    border: 1px solid purple;
+    span {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}

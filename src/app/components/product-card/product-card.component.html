@@ -1,0 +1,39 @@
+<div>
+  <ul>
+    <li>Total produits:{{ products().length }}</li>
+    <li>
+      <span style="margin-right: 1rem"
+        >Produits en stocks:{{ totalInStock() }}</span
+      >
+      <span>Produits en stocks:{{ totalRupture() }}</span>
+    </li>
+  </ul>
+  <table>
+    <thead>
+      <tr>
+        <th>#ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>In stock?</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (product of products(); track product.id) {
+      <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.description }}</td>
+        <td [ngClass]="product.inStock ? 'in-stock' : 'rupture'">
+          <span> {{ product.inStock ? "En stock" : "Rupture" }}</span>
+        </td>
+        <td><button (click)="removeProduct(product)">delete</button></td>
+      </tr>
+      } @empty {
+      <h1>Liste de produits vides</h1>
+      }
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,15 @@
+<div>
+  <h1>simple calcul</h1>
+  <ul>
+    <li>Price:{{ price() }}</li>
+    <li>
+      Quantity:{{ quantity() }}
+
+      <button (click)="increment()">+</button>
+      <button (click)="decrement()" [disabled]="quantity() <= 0">-</button>
+    </li>
+    <li>
+      Total:<strong>{{ total() }}</strong>
+    </li>
+  </ul>
+</div>

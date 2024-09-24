@@ -1,0 +1,33 @@
+div {
+  border: papayawhip solid 0.2rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    li {
+      list-style: none;
+      button {
+        margin: 0 0.75rem;
+        background-color: rgba(99, 222, 99, 0.904); 
+        border: none;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 900;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition-duration: background-color 0.8s ease;
+        &:hover{
+             background-color: green;
+             
+        }
+        &:disabled{
+            background-color:gray;
+            cursor:not-allowed;
+        }
+        
+      }
+    }
+  }
+}
